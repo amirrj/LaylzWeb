@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif; }
+
+a {
+  text-decoration: none; }
+
+.slideshow {
+  height: 50vh;
+  position: relative; }
+  .slideshow::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100; }
+  .slideshow__photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+    opacity: 0;
+    transition: 0.5s all ease; }
+  .slideshow__button-box {
+    position: absolute;
+    right: 50%;
+    bottom: 2rem;
+    z-index: 99;
+    transform: translate(50%, -50%);
+    z-index: 100;
+    display: flex; }
+  .slideshow__button {
+    position: relative;
+    height: 1.8rem;
+    width: 1.8rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    transition: 0.5s all ease;
+    cursor: pointer; }
+    .slideshow__button:not(:last-child) {
+      margin-right: 1.3rem; }
+  .slideshow .opacity-1 {
+    opacity: 1; }
+  .slideshow .active {
+    background-color: #5c0475; }
+
+.tile {
+  height: 250px;
+  margin: 1.5rem 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .tile::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7); }
+  .tile__text-box {
+    padding: 2rem;
+    border: 1rem solid #fff;
+    height: 110px;
+    width: 80%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .tile__text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 7rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase; }
+    .tile__text--3 {
+      font-size: 5rem; }
+  .tile--1 {
+    background: url(../../img/beauty-tile1.jpg) center center no-repeat;
+    background-size: cover; }
+  .tile--2 {
+    background: url(../../img/beauty-tile2.jpg) center center no-repeat;
+    background-size: cover; }
+  .tile--3 {
+    background: url(../../img/beauty-tile3.jpg) center center no-repeat;
+    background-size: cover; }
+
+.nav {
+  overflow-x: hidden;
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #e3e3e3;
+  transition: 0.8s width ease; }
+  .nav.open {
+    width: 100%; }
+    .nav.open .nav__icon {
+      visibility: hidden; }
+      .nav.open .nav__icon::before {
+        visibility: visible;
+        transform: rotate(45deg);
+        top: 3rem;
+        background: linear-gradient(to right, #5c0475, #cc00a4); }
+      .nav.open .nav__icon::after {
+        visibility: visible;
+        transform: rotate(-45deg);
+        top: 3rem;
+        background: linear-gradient(to left, #5c0475, #cc00a4); }
+  .nav__icon {
+    position: fixed;
+    top: 3rem;
+    left: 2rem;
+    background-color: #fff;
+    width: 4.2rem;
+    height: 0.6rem;
+    border-radius: 10px;
+    z-index: 1000; }
+    .nav__icon::before {
+      content: '';
+      position: fixed;
+      top: 1.7rem;
+      left: 2rem;
+      background-color: #fff;
+      width: 4.2rem;
+      height: 0.6rem;
+      border-radius: 10px;
+      z-index: 1000; }
+    .nav__icon::after {
+      content: '';
+      position: fixed;
+      top: 4.3rem;
+      left: 2rem;
+      background-color: #fff;
+      width: 4.2rem;
+      height: 0.6rem;
+      border-radius: 10px;
+      z-index: 1000; }
+  .nav__container {
+    width: 80%;
+    position: absolute;
+    top: 7rem;
+    left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+  .nav__title {
+    font-family: 'Raleway', sans-serif;
+    padding: 2rem 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid #b6b6b6;
+    color: transparent;
+    background: linear-gradient(to right, #5c0475, #cc00a4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text; }
+  .nav__list {
+    list-style: none;
+    padding: 1rem;
+    margin-left: 3rem; }
+    .nav__list-item {
+      padding: 1.5rem 1rem; }
+      .nav__list-item:not(:last-child) {
+        border-bottom: 2px solid #b6b6b6; }
+    .nav__list-link {
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px; }
+
+.testimonial {
+  margin-top: 4rem;
+  position: relative; }
+  .testimonial__text {
+    font-family: 'Montserrat', sans-serif;
+    display: none;
+    text-align: center;
+    padding: 3rem;
+    font-size: 3rem;
+    color: #cc00a4;
+    position: relative; }
+    .testimonial__text::before {
+      content: '"';
+      font-size: 6rem;
+      position: absolute;
+      top: -5rem;
+      left: 2.5rem;
+      font-family: 'Lily Script One', cursive;
+      transform: rotate(180deg); }
+    .testimonial__text::after {
+      content: '"';
+      font-size: 6rem;
+      position: absolute;
+      bottom: -4rem;
+      right: 2.5rem;
+      font-family: 'Lily Script One', cursive; }
+  .testimonial__button-box {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .testimonial__button {
+    position: relative;
+    height: 1.8rem;
+    width: 1.8rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    transition: 0.5s all ease;
+    cursor: pointer; }
+    .testimonial__button:not(:last-child) {
+      margin-right: 1.3rem; }
+
+.d-block {
+  display: block; }
+
+.active {
+  background-color: #cc00a4; }
+
+.contact {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem; }
+  .contact__tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    flex: 0 0 43%;
+    background-image: linear-gradient(to bottom, #cc00a4, #5c0475); }
+  .contact__inner--1 {
+    width: 10.5rem; }
+  .contact__inner--2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: #fff;
+    text-transform: uppercase; }
+
+.beauty {
+  height: 49.75vh;
+  background: url(./../../img/lipstick-edit.jpg) center center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.cake {
+  height: 49.75vh;
+  background: url(./../../img/bakinghome-edit.jpg) center center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.home-info-box {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .home-info-box__logo {
+    width: 17rem;
+    margin-bottom: 0.5rem; }
+  .home-info-box__title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    text-align: center;
+    text-transform: uppercase; }
+
+.center-border {
+  height: 0.5vh;
+  background: #5c0475;
+  background: linear-gradient(90deg, #5c0475 45%, #cc00a4 55%); }

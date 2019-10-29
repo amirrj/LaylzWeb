@@ -1,0 +1,53 @@
+.beauty {
+  height: 49.75vh;
+  background: url(./../../img/lipstick-edit.jpg) center center no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cake {
+  height: 49.75vh;
+  background: url(./../../img/bakinghome-edit.jpg) center center no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-info-box {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__logo {
+    width: 17rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    text-align: center;
+    // margin-left: 1rem;
+    text-transform: uppercase;
+  }
+}
+
+.center-border {
+  height: 0.5vh;
+
+  background: $color-primary-dark;
+  background: linear-gradient(
+    90deg,
+    rgba($color-primary-dark, 1) 45%,
+    rgba($color-primary-light, 1) 55%
+  );
+}

@@ -1,0 +1,128 @@
+.nav {
+  overflow-x: hidden;
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: $color-grey-light;
+  transition: 0.8s width ease;
+
+  &.open {
+    width: 100%;
+
+    & .nav__icon {
+      visibility: hidden;
+      &::before {
+        visibility: visible;
+        transform: rotate(45deg);
+        top: 3rem;
+        background: linear-gradient(
+          to right,
+          $color-primary-dark,
+          $color-primary-light
+        );
+      }
+
+      &::after {
+        visibility: visible;
+        transform: rotate(-45deg);
+        top: 3rem;
+        background: linear-gradient(
+          to left,
+          $color-primary-dark,
+          $color-primary-light
+        );
+      }
+    }
+  }
+
+  &__icon {
+    position: fixed;
+    top: 3rem;
+    left: 2rem;
+    background-color: #fff;
+    width: 4.2rem;
+    height: 0.6rem;
+    border-radius: 10px;
+
+    z-index: 1000;
+
+    &::before {
+      content: '';
+      position: fixed;
+      top: 1.7rem;
+      left: 2rem;
+      background-color: #fff;
+      width: 4.2rem;
+      height: 0.6rem;
+      border-radius: 10px;
+
+      z-index: 1000;
+    }
+
+    &::after {
+      content: '';
+      position: fixed;
+      top: 4.3rem;
+      left: 2rem;
+      background-color: #fff;
+      width: 4.2rem;
+      height: 0.6rem;
+      border-radius: 10px;
+
+      z-index: 1000;
+    }
+  }
+
+  &__container {
+    width: 80%;
+    position: absolute;
+    top: 7rem;
+    left: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__title {
+    font-family: 'Raleway', sans-serif;
+    padding: 2rem 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid $color-grey-dark;
+    color: transparent;
+    background: linear-gradient(
+      to right,
+      $color-primary-dark,
+      $color-primary-light
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 1rem;
+    margin-left: 3rem;
+    &-item {
+      padding: 1.5rem 1rem;
+
+      &:not(:last-child) {
+        border-bottom: 2px solid $color-grey-dark;
+      }
+    }
+
+    &-link {
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+}

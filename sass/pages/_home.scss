@@ -1,0 +1,26 @@
+.beauty {
+  height: 49.75vh;
+  background: url(./../../img/lipstick-edit.jpg) center center no-repeat;
+  background-size: cover;
+
+  @include flex-center;
+}
+
+.cake {
+  height: 49.75vh;
+  background: url(./../../img/bakinghome-edit.jpg) center center no-repeat;
+  background-size: cover;
+
+  @include flex-center;
+}
+
+.center-border {
+  height: 0.5vh;
+
+  background: $color-primary-dark;
+  background: linear-gradient(
+    90deg,
+    rgba($color-primary-dark, 1) 45%,
+    rgba($color-primary-light, 1) 55%
+  );
+}

@@ -10,9 +10,13 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $font-text-primary;
 }
 
-a {
+a,
+a:active,
+a:focus,
+a:link,
+a:visited {
   text-decoration: none;
 }

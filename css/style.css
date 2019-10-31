@@ -8,9 +8,13 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
-a {
+a,
+a:active,
+a:focus,
+a:link,
+a:visited {
   text-decoration: none; }
 
 .slideshow {
@@ -82,7 +86,7 @@ a {
     justify-content: center;
     align-items: center; }
   .tile__text {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 7rem;
     font-weight: 700;
     color: #fff;
@@ -106,7 +110,7 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 99999;
   background-color: #e3e3e3;
   transition: 0.8s width ease; }
   .nav.open {
@@ -161,7 +165,7 @@ a {
     flex-direction: column;
     justify-content: space-around; }
   .nav__title {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     padding: 2rem 0;
     font-size: 2.5rem;
     font-weight: 700;
@@ -191,7 +195,6 @@ a {
   margin-top: 4rem;
   position: relative; }
   .testimonial__text {
-    font-family: 'Montserrat', sans-serif;
     display: none;
     text-align: center;
     padding: 3rem;
@@ -250,10 +253,28 @@ a {
   .contact__inner--1 {
     width: 10.5rem; }
   .contact__inner--2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 2.8rem;
     color: #fff;
+    text-transform: uppercase; }
+
+.logo-heading-box {
+  color: #fff;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .logo-heading-box__logo {
+    width: 17rem;
+    margin-bottom: 0.5rem; }
+  .logo-heading-box__title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    text-align: center;
     text-transform: uppercase; }
 
 .beauty {
@@ -272,24 +293,54 @@ a {
   justify-content: center;
   align-items: center; }
 
-.home-info-box {
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .home-info-box__logo {
-    width: 17rem;
-    margin-bottom: 0.5rem; }
-  .home-info-box__title {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 2rem;
-    letter-spacing: 1rem;
-    text-align: center;
-    text-transform: uppercase; }
-
 .center-border {
   height: 0.5vh;
   background: #5c0475;
   background: linear-gradient(90deg, #5c0475 45%, #cc00a4 55%); }
+
+.beauty--about {
+  height: 50vh;
+  background: url(./../../img/beautyAbout-header.jpg) center center no-repeat;
+  background-size: cover;
+  position: relative; }
+  .beauty--about .logo-heading-box__title {
+    letter-spacing: 0.5rem; }
+  .beauty--about::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); }
+
+.heading {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .heading__title {
+    font-family: "Raleway", sans-serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #5c0475, #cc00a4);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text; }
+  .heading__border {
+    height: 0.5rem;
+    width: 60%;
+    background-color: #5c0475; }
+
+.about__content {
+  padding: 2.5rem 2.8rem; }
+
+.about__text {
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-align: center; }

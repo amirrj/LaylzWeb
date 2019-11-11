@@ -10,13 +10,12 @@
 @import 'base/utilities';
 
 //Components
-@import 'components/slideshow';
-@import 'components/tile';
 @import 'components/navigation';
-@import 'components/testimonial';
-@import 'components/contact-tiles';
 @import 'components/logo-and-heading-box';
 
 //Pages
+@import 'pages/index';
 @import 'pages/home';
 @import 'pages/about';
+@import 'pages/work';
+@import 'pages/services';

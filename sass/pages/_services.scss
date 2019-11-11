@@ -1,0 +1,132 @@
+.beauty,
+.cake {
+  &--services {
+    background: url(../../img/beautyServices-header.jpg) center center no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 3rem;
+
+    &::before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    .logo-heading-box {
+      &__title {
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+.cake {
+  &-bg {
+    background: url(../img/cakeservices-header.jpg) center center no-repeat;
+    background-size: cover;
+  }
+}
+
+.services {
+  &__tile {
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    &-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.5rem 2rem;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 2;
+      }
+
+      //tile 1 background
+      &--beauty-1 {
+        background: url(../img/beautyservices-tile1.jpg) center center no-repeat;
+        background-size: cover;
+      }
+
+      &--beauty-2 {
+        background: url(../img/beautyservices-tile2.jpg) center center no-repeat;
+        background-size: cover;
+      }
+
+      &--beauty-3 {
+        background: url(../img/beautyservices-tile3.jpg) center center no-repeat;
+        background-size: cover;
+      }
+
+      &--cake-1 {
+        background: url(../img/cakeservices-tile1.jpg) center center no-repeat;
+        background-size: cover;
+      }
+
+      &--cake-2 {
+        background: url(../img/cakeservices-tile2.jpg) center center no-repeat;
+        background-size: cover;
+      }
+
+      &--cake-3 {
+        background: url(../img/cakeservices-tile3.jpg) center center no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &-text {
+      font-family: $font-heading-primary;
+      font-size: 3.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #fff;
+      z-index: 3;
+    }
+    &-icon {
+      border: 5px solid #fff;
+      border-radius: 200px;
+      height: 7rem;
+      width: 7rem;
+      fill: #fff;
+      z-index: 3;
+    }
+
+    &-content {
+      text-align: center;
+      margin: 1rem;
+
+      &.closed {
+        display: none;
+      }
+      &--text {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+        margin: 2rem;
+        border-bottom: 1px solid grey;
+        &::first-letter {
+          font-size: 4rem;
+          color: $color-primary-light;
+          font-weight: 700;
+        }
+      }
+      &--price {
+        font-size: 2rem;
+      }
+    }
+  }
+}

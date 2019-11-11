@@ -23,6 +23,31 @@
   }
 }
 
+.cake {
+  &--about {
+    height: 50vh;
+    background: url(../img/cake-tile3.jpg) center center no-repeat;
+    background-size: cover;
+    position: relative;
+
+    & .logo-heading-box {
+      &__title {
+        letter-spacing: 0.7rem;
+      }
+    }
+
+    &::before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
 .heading {
   // height: 28rem;
   margin-top: 4rem;
